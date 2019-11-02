@@ -1,0 +1,14 @@
+<main>
+        <h1>{{pageTitle}}</h1>
+
+    <form method="POST" action="/reset">
+        Email: <input type="email" name="email"><br>
+        <button type="submit">Reset Password</button>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+    
+</main>

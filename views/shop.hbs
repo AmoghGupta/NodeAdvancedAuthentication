@@ -1,0 +1,16 @@
+<main>
+     {{#if shopPage}}
+        <h1>Welcome to Shopping Page</h1>
+    {{/if}}
+    <h1>My Products</h1>
+    <p>List of all the products...
+       <ul>
+           {{#each products as |item|}}
+            <li>
+                
+                 <a href='/products/{{item._id}}'>{{item.title}}</a>
+            </li>
+            {{/each}}
+       </ul>
+    </p>
+</main>

@@ -1,0 +1,13 @@
+<main>
+    {{#if addProductPage}}
+        <h1>Welcome to Add Products Page</h1>
+    {{/if}}
+
+    <form method="POST" action="/admin/add-product">
+        Title: <input type="text" name="title"><br>
+        Description:<input type="text" name="description"><br>
+        Price:<input type="text" name="price"><br>
+        <button type="submit">Add Product</button>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+</main>

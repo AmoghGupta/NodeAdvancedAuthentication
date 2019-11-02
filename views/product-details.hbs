@@ -1,0 +1,17 @@
+<main>
+     {{#if detailsPage}}
+        <h1>Welcome to Product Details Page</h1>
+    {{/if}}
+    <h1>My Products</h1>
+    <p>You selected the following product:
+       <ul>
+            <li>
+                Title: {{product.title}} <br> 
+                Id: {{product.id}} <br>
+                Description: {{product.description}}<br>
+                Price: {{product.price}}
+            </li>
+            
+       </ul>
+    </p>
+</main>

@@ -1,0 +1,23 @@
+<main>
+    {{#if loginPage}}
+        <h1>Welcome to NodeJS Application</h1>
+    {{/if}}
+
+    <form method="POST" action="/login">
+        Email: <input type="email" name="email"><br>
+        Password:<input type="password" name="password"><br>
+        <button type="submit">Login</button>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+     <div class="signup">
+        <a href="/reset">Reset Password</a>
+    </div>
+
+   
+   {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+    
+    
+   
+</main>
